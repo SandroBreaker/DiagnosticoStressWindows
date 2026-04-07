@@ -1,0 +1,58 @@
+﻿Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\Directory\shell\DiagnosticoStressWindows]
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\DiagnosticoStressWindows]
+
+[HKEY_CLASSES_ROOT\Directory\shell\DiagnosticoStressWindows]
+"MUIVerb"="Diagnóstico Stress Windows"
+"Icon"="powershell.exe"
+"SubCommands"=""
+"Position"="Bottom"
+
+[HKEY_CLASSES_ROOT\Directory\shell\DiagnosticoStressWindows\shell\001Quick]
+"MUIVerb"="Execução rápida (raiz fixa)"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\DiagnosticoStressWindows\shell\001Quick\command]
+@="powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\dev\\DiagnosticoStressWindows\\DiagnosticoStressWindows.v7.ps1\" -Quick -IncludeServices"
+
+[HKEY_CLASSES_ROOT\Directory\shell\DiagnosticoStressWindows\shell\002Full]
+"MUIVerb"="Execução completa (raiz fixa)"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\DiagnosticoStressWindows\shell\002Full\command]
+@="powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\dev\\DiagnosticoStressWindows\\DiagnosticoStressWindows.v7.ps1\" -IncludeServices"
+
+[HKEY_CLASSES_ROOT\Directory\shell\DiagnosticoStressWindows\shell\003Archive]
+"MUIVerb"="Completa + arquivar runs antigas (7 dias)"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\DiagnosticoStressWindows\shell\003Archive\command]
+@="powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\dev\\DiagnosticoStressWindows\\DiagnosticoStressWindows.v7.ps1\" -IncludeServices -ArchiveOldRuns -RetentionDays 7"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\DiagnosticoStressWindows]
+"MUIVerb"="Diagnóstico Stress Windows"
+"Icon"="powershell.exe"
+"SubCommands"=""
+"Position"="Bottom"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\DiagnosticoStressWindows\shell\001Quick]
+"MUIVerb"="Execução rápida (raiz fixa)"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\DiagnosticoStressWindows\shell\001Quick\command]
+@="powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\dev\\DiagnosticoStressWindows\\DiagnosticoStressWindows.v7.ps1\" -Quick -IncludeServices"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\DiagnosticoStressWindows\shell\002Full]
+"MUIVerb"="Execução completa (raiz fixa)"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\DiagnosticoStressWindows\shell\002Full\command]
+@="powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\dev\\DiagnosticoStressWindows\\DiagnosticoStressWindows.v7.ps1\" -IncludeServices"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\DiagnosticoStressWindows\shell\003Archive]
+"MUIVerb"="Completa + arquivar runs antigas (7 dias)"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\DiagnosticoStressWindows\shell\003Archive\command]
+@="powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\dev\\DiagnosticoStressWindows\\DiagnosticoStressWindows.v7.ps1\" -IncludeServices -ArchiveOldRuns -RetentionDays 7"

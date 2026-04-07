@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+; --- [1] MENU DE CONTEXTO (BOTAO DIREITO NO DESKTOP) ---
+[HKEY_CLASSES_ROOT\Directory\Background\shell\LimpezaSeguraSRE]
+@="Executar Limpeza SRE (PS7)"
+"Icon"="C:\\Program Files\\PowerShell\\7\\pwsh.exe,0"
+"Position"="Bottom"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\LimpezaSeguraSRE\command]
+@="\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -NoExit -NoProfile -ExecutionPolicy Bypass -File \"C:\\dev\\desktop_clear\\Limpeza_Segura.ps1\""
+
+; --- [2] DEFINIR PS7 COMO PADRAO PARA TODOS OS .PS1 ---
+; Define o PowerShell 7 como o executor padrao ao abrir/clicar duas vezes
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Open\Command]
+@="\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -NoProfile -ExecutionPolicy Bypass -File \"%1\""
+
+; Garante que o menu "Executar com o PowerShell" tambem aponte para o PS7
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\0\Command]
+@="\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -NoProfile -ExecutionPolicy Bypass -File \"%1\""
